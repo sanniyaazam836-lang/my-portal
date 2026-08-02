@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="profile">
+
+<h1>📚 My Notes</h1>
+
+<p>Welcome to your Notes section.</p>
+
+<a href="dashboard.html">Back to Dashboard</a>
+
+</div>
+
+</body>
+<script>
+
+function uploadNote(){
+
+    let file=document.getElementById("noteFile").files[0];
+
+    if(file){
+
+        let list=document.getElementById("notesList");
+
+        list.innerHTML+="<p>📄 "+file.name+"</p>";
+
+    }
+    else{
+
+        alert("Please select a PDF.");
+
+    }
+
+}
+
+</script>
+</html>
+<input type="file" id="noteFile" accept=".pdf">
+
+<br><br>
+
+<button onclick="uploadNote()">Upload Note</button>
+
+<br><br>
+
+<div id="notesList"></div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Login</h1>
+
+<input type="text" id="username" placeholder="Enter Username">
+<br><br>
+
+<input type="password" id="password" placeholder="Enter Password">
+<br><br>
+
+<button onclick="login()">Login</button>
+<script>
+function login() {
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    alert("Username: " + username);
+alert("Password: " + password);
+
+if (username === "Sanniya" && password === "california5") {
+      window.location.href = "dashboard.html";
+    } else {
+        alert("Invalid Username or Password");
+    }
+
+}
+</script>
+</body>
+</html>
